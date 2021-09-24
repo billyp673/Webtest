@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+Put Webcontent Here
+</html>
+<script>
+function getOS() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+    else if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+    else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+	else {
+    return "PC";
+	}
+}
+var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+console.log(/windows phone/i.test(userAgent))
+console.log(getOS())
+if (getOS() != "PC") {
+console.log("not PC")
+/*window.location.assign("file://C:/Users/bilo/Desktop/webproject/index.html");*/
+}
+</script>
