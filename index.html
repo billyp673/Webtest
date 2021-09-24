@@ -30,7 +30,9 @@ txt += "<p>Browser Online: " + navigator.onLine + "</p>";
 txt += "<p>Platform: " + navigator.platform + "</p>";
 txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
 txt += "<p>isMobile: " + isMobile() + "</p>";
-
+if (isMobile()) {
+window.location.assign("mobile.html");
+}
 document.getElementById("demo").innerHTML = txt;
 </script>
 
