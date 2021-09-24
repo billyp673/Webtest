@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 <body>
-Put Webcontent Here
-</html>
+
+<div id="demo"></div>
+
 <script>
-function getOS() {
-    return navigator.platform;
-}
-var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-console.log(/windows phone/i.test(userAgent))
-console.log(getOS())
-if (getOS() != "PC") {
-console.log("not PC")
-/*window.location.assign("file://C:/Users/bilo/Desktop/webproject/index.html");*/
-}
+var txt = "";
+txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+txt += "<p>Browser Name: " + navigator.appName + "</p>";
+txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
+txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+txt += "<p>Browser Language: " + navigator.language + "</p>";
+txt += "<p>Browser Online: " + navigator.onLine + "</p>";
+txt += "<p>Platform: " + navigator.platform + "</p>";
+txt += "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+document.getElementById("demo").innerHTML = txt;
 </script>
+
+</body>
+</html>
